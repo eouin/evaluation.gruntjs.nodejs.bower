@@ -1,0 +1,38 @@
+{
+  "name": "demo.js",
+  "version": "0.0.1",
+  "description": "Introduction to GruntJS, Bower and NodeJS",
+  "scripts": {
+    "test": "grunt jshint",
+    "start": ""
+  },
+  "author": {
+    "name": "Edouard Ouin",
+    "email": "edouard@ouin.org",
+    "web": "http://www.ouin.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eouin/demo.js.git"
+  },
+  "engines": {
+    "node": "~0.8.0"
+  },
+  "dependencies": {
+    "underscore": "~1.3.3",
+    "express": "~2.5.9",
+    "mustache": "~0.4.0",
+    "socket.io": "~0.9.13"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.2.0",
+    "grunt-contrib-cssmin": "~0.4.1",
+    "grunt-contrib-uglify": "~0.1.1",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt-contrib-sass": "~0.2.2",
+    "grunt-contrib-connect": "~0.2.0",
+    "grunt-zip": "~0.7.0",
+    "grunt": "~0.4.0",
+    "grunt-html": "~0.3.4"
+  }
+}
