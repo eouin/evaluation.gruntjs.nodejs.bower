@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Evaluation of GruntJS, NodeJS and Bower</title>
+    <title>Evaluation of GruntJS, NodeJS, Bower and Sass</title>
     <meta name="description" content="Evaluation of GruntJS, NodeJS and Bower">
     <meta name="author" content="Edouard Ouin">
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -25,11 +25,12 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section>
-          <h2>Introduction to GruntJS Bower and NodeJS</h2>
-          <img src="img/nodejs-logo.png" alt="NodeJS"  width="250px">
-          <img src="img/grunt-logo.png" alt="GruntJS" width="250px">
-          <img src="img/bower-logo.png" alt="Bower"  width="250px">
-          <p><small>By Edouard Ouin, David Jimenez Calvo and Sinikka Schroter.</small></p>
+          <h2>Evaluation of GruntJS, NodeJS, Bower and Sass</h2>
+          <img src="img/nodejs-logo.png" alt="NodeJS"  width="200px">
+          <img src="img/grunt-logo.png" alt="GruntJS" width="200px">
+          <img src="img/bower-logo.png" alt="Bower"  width="200px">
+          <img src="img/Sass_Logo.gif" alt="Sass"  width="200px" height="200px">
+          <p><small>By Edouard Ouin, David Jimenez Calvo, Sinikka Schroter And Steve Ben Ezra</small></p>
           <p>available at <a href="https://github.com/eouin/evaluation.gruntjs.nodejs.bower.git">https://github.com/eouin/evaluation.gruntjs.nodejs.bower.git</a></p>
         </section>
         <section>
@@ -446,6 +447,50 @@ grunt.registerTask('default', ['imagemin']);
             </p>
           </section>
         </section>
+        <section>
+          <section>
+            <h2>What is Sass?</h2>
+            <img src="img/Sass_logo.gif" alt="Sass">
+            
+          </section>
+           <section>
+              <h2>
+                Sass (Syntactically Awesome Stylesheets) is a CSS extension language
+              </h2>
+              <p>
+                You write .scss (Sass files) which then get compiled into normal .css files by a grunt plugin for use by your application.
+              </p>
+            </section>
+            <section>
+              <h2>
+                It gives us features which don't exist in CSS like:
+              </h2>
+              <div>
+              <ul>
+                <li>Variables - reuse a value throughout your stylesheet</li>
+                <li>Nesting - nesting css selectors for better readability</li>
+                <li>Imports - allows splitting your CSS into smaller, more maintainable portions and reuse/import them where needed </li>
+                <li>Mixins - group CSS declarations that you want to reuse throughout your site </li>
+                <li>Inhertitance - share a set of CSS properties from one selector to another  </li>
+                <li>Operators - do match in CSS with standard math operators (for calculating pixel sizes etc.) </li>
+              </ul>
+            </div>
+            </section>
+            <section>
+              <h2>
+                The benefits:
+              </h2>
+              <div>
+              <ul>
+                <li>CSS Reuse</li>
+                <li>Better Readability</li>
+                <li>Cleaner/leaner/organized CSS</li>
+                <li>Fewer HTTP Requests using @Import attribute</li>
+              </ul>
+            </div>
+            </section>
+        </section>
+
         <section>
           <h2>Reference</h2>
           <ul>
