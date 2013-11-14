@@ -1,51 +1,37 @@
 <!doctype html>
 <html lang="en">
-
-	<head>
-		<meta charset="utf-8">
-
-		<title>Evaluation of GruntJS, NodeJS and Bower</title>
-
-		<meta name="description" content="Evaluation of GruntJS, NodeJS and Bower">
-		<meta name="author" content="Edouard Ouin">
-
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/night.css" id="theme">
-
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-
-				<section>
-					<h2>Introduction to GruntJS Bower and NodeJS</h2>
+  <head>
+    <meta charset="utf-8">
+    <title>Evaluation of GruntJS, NodeJS and Bower</title>
+    <meta name="description" content="Evaluation of GruntJS, NodeJS and Bower">
+    <meta name="author" content="Edouard Ouin">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h2>Introduction to GruntJS Bower and NodeJS</h2>
           <img src="img/nodejs-logo.png" alt="NodeJS"  width="250px">
           <img src="img/grunt-logo.png" alt="GruntJS" width="250px">
           <img src="img/bower-logo.png" alt="Bower"  width="250px">
-					<p><small>By Edouard Ouin, David Jimenez Calvo and Sinikka Schroter.</small></p>
+          <p><small>By Edouard Ouin, David Jimenez Calvo and Sinikka Schroter.</small></p>
           <p>available at <a href="https://github.com/eouin/evaluation.gruntjs.nodejs.bower.git">https://github.com/eouin/evaluation.gruntjs.nodejs.bower.git</a></p>
-				</section>
-
+        </section>
         <section>
           <section data-background="img/bg-cogs.png">
             <h2>What is NodeJS?</h2>
@@ -53,15 +39,15 @@
           </section>
           <section>
             <h2>
-            Node.js is a way of running JavaScript on the server.
+              Node.js is a way of running JavaScript on the server.
             </h2>
             <p>
-            Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+              Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
             </p>
           </section>
           <section>
             <h2>
-            Server side.
+              Server side.
             </h2>
             <ul>
               <li>Javascript</li>
@@ -73,7 +59,7 @@
           </section>
           <section>
             <h2>
-            So why are async and events good?
+              So why are async and events good?
             </h2>
             <ul>
               <li>Easier to write</li>
@@ -83,7 +69,7 @@
           </section>
           <section>
             <h2>
-            Rapid prototyping, rapid development
+              Rapid prototyping, rapid development
             </h2>
             <ul>
               <li>RESTful services with no effort</li>
@@ -93,59 +79,59 @@
           </section>
           <section>
             <h2>
-            Community modules - NPM
+              Community modules - NPM
             </h2>
             <img src="img/npm.png" alt="LinkedIn" width="800px">
           </section>
           <section>
             <h2>
-                Private NPM registry
+              Private NPM registry
             </h2>
             <ul>
-                <li>Simply replicate the NPM CouchDB</li>
-                <li>Publish packages to private or public NPM registry</li>
-                <li>Tutorial: <a href="http://clock.co.uk/tech-blogs/how-to-create-a-private-npmjs-repository">npmjs.org never goes down</a></li>
+              <li>Simply replicate the NPM CouchDB</li>
+              <li>Publish packages to private or public NPM registry</li>
+              <li>Tutorial: <a href="http://clock.co.uk/tech-blogs/how-to-create-a-private-npmjs-repository">npmjs.org never goes down</a></li>
             </ul>
           </section>
           <section>
             <h2>
-            Interesting projects
+              Interesting projects
             </h2>
             <ul>
               <li>
                 <h4>Express</h4>
                 <small>
-                <ol>
-                  <li>Minimal web application framework</li>
-                  <li>Additional features are provided as modules or middleware: template engines, models, authentication and authorization, etc ...</li>
-                </ol>
+                  <ol>
+                    <li>Minimal web application framework</li>
+                    <li>Additional features are provided as modules or middleware: template engines, models, authentication and authorization, etc ...</li>
+                  </ol>
                 </small>
               </li>
               <li>
                 <h4>Meteor</h4>
                 <small>
-                <ol>
-                  <li>Next-gen framework for real-time collaborative web applications</li>
-                  <li>Live page updates</li>
-                  <li>Support for offline databases with subsequent synchronization</li>
-                </ol>
+                  <ol>
+                    <li>Next-gen framework for real-time collaborative web applications</li>
+                    <li>Live page updates</li>
+                    <li>Support for offline databases with subsequent synchronization</li>
+                  </ol>
                 </small>
               </li>
               <li>
                 <h4>Socket.io</h4>
                 <small>
-                <ol>
-                  <li>Provides support for server-initiated push events using WebSockets, Ajax polling, iframe, JSONP or Flash based channels</li>
-                  <li>Transparent for both clients and server</li>
-                  <li>Can run standalone or integrated with Express</li>
-                </ol>
+                  <ol>
+                    <li>Provides support for server-initiated push events using WebSockets, Ajax polling, iframe, JSONP or Flash based channels</li>
+                    <li>Transparent for both clients and server</li>
+                    <li>Can run standalone or integrated with Express</li>
+                  </ol>
                 </small>
               </li>
             </ul>
           </section>
           <section>
             <h2>
-            When to use NodeJS
+              When to use NodeJS
             </h2>
             <ul>
               <li>REST+JSON APIs</li>
@@ -156,7 +142,7 @@
           </section>
           <section>
             <h2>
-            When NOT to use NodeJS
+              When NOT to use NodeJS
             </h2>
             <ul>
               <li>CPU-bound tasks</li>
@@ -175,22 +161,21 @@
             <small><a href="http://www.nearform.com/nodecrunch/?p=109#.Unuo1vkRB8E">How Paypal Is Being Revolutionized By Node.js And Lean-ux</a></small>
           </section>
         </section>
-
-				<section>
-					<section>
-						<h2>What is GruntJS?</h2>
+        <section>
+          <section>
+            <h2>What is GruntJS?</h2>
             <img src="img/grunt-logo.png" alt="GruntJS">
-					</section>
-					<section>
-						<h2>A Script Runner</h2>
-						<p>
+          </section>
+          <section>
+            <h2>A Script Runner</h2>
+            <p>
               It's like a build tool, but different.
               Build systems have been around for ages.
             </p>
-						<p>
+            <p>
               <small>make, ant, rake, jake, cake, maven, etc.</small>
             <p>
-					</section>
+          </section>
           <section>
             <h2>Setup</h2>
             <ul>
@@ -207,7 +192,8 @@
             </ul>
           </section>
           <section>
-            <h2>package.json</h4>
+            <h2>
+            package.json</h4>
             <pre>
               <code data-trim>
 {
@@ -228,7 +214,6 @@
             </pre>
             <a href="https://npmjs.org/doc/json.html">https://npmjs.org/doc/json.html</a>
           </section>
-
           <section>
             <h2>Gives you</h2>
             <ul>
@@ -236,14 +221,13 @@
               <li>DevDependencies that allow you to quickly install all required npm modules</li>
             </ul>
           </section>
-
           <section>
             <h2>Install Grunt</h2>
             <p>$ npm install grunt --save-dev</p>
           </section>
-
           <section>
-            <h2>package.json</h4>
+            <h2>
+            package.json</h4>
             <pre>
               <code data-trim>
 {
@@ -264,16 +248,14 @@
             </pre>
             <a href="https://npmjs.org/doc/json.html">https://npmjs.org/doc/json.html</a>
           </section>
-
           <section>
             <h2>Install all the defined Dependencies in one go</h2>
             <p>$ npm install</p>
           </section>
-
           <section>
-            <h2>Gruntfile.js</h4>
+            <h2>
+            Gruntfile.js</h4>
           </section>
-
           <section>
             <h3>Minify with Grunt</h3>
             <pre>
@@ -414,7 +396,6 @@ grunt.registerTask('default', ['imagemin']);
               </code>
             </pre>
           </section>
-
           <section>
             <h2>Watch</h2>
             <ul>
@@ -423,9 +404,7 @@ grunt.registerTask('default', ['imagemin']);
               <li>With Grunt you can group all of them in a single place</li>
             </ul>
           </section>
-
         </section>
-
         <section>
           <section>
             <h2>What is Bower?</h2>
@@ -433,10 +412,10 @@ grunt.registerTask('default', ['imagemin']);
           </section>
           <section>
             <h2>
-            Bower is package manager for the web done by Twitter
+              Bower is package manager for the web done by Twitter
             </h2>
             <p>
-            Bower is a package manager for the web or, more specifically, browser development. Just think npm, but for browser development instead of node development. Bower’s purpose is to manage front-end assets, which can include not just javascript files, but also html, css, image, and font files. Because of this, Bower, unlike npm, can have multiple files (e.g. .js, .css, .html, .png, .ttf) which are considered the main file(s). Bower semantically considers these main files, when packaged together, a component.
+              Bower is a package manager for the web or, more specifically, browser development. Just think npm, but for browser development instead of node development. Bower’s purpose is to manage front-end assets, which can include not just javascript files, but also html, css, image, and font files. Because of this, Bower, unlike npm, can have multiple files (e.g. .js, .css, .html, .png, .ttf) which are considered the main file(s). Bower semantically considers these main files, when packaged together, a component.
             </p>
           </section>
           <section>
@@ -454,28 +433,27 @@ grunt.registerTask('default', ['imagemin']);
           </section>
           <section>
             <h2>
-            Community modules
+              Community modules
             </h2>
             <img src="img/bower.png" alt="LinkedIn" width="800px">
           </section>
           <section>
             <h2>
-            What is the difference between Bower and NPM?
+              What is the difference between Bower and NPM?
             </h2>
             <p>
-            npm is most commonly used for Node.js modules, even though a few people use it for front-end packages. Bower is created solely for the front-end and is optimized with that in mind. The biggest difference is that npm does nested dependency tree, which doesn't work that well on the front-end, while Bower requires a flat dependency tree.
+              npm is most commonly used for Node.js modules, even though a few people use it for front-end packages. Bower is created solely for the front-end and is optimized with that in mind. The biggest difference is that npm does nested dependency tree, which doesn't work that well on the front-end, while Bower requires a flat dependency tree.
             </p>
           </section>
         </section>
-
-				<section>
-					<h2>Reference</h2>
+        <section>
+          <h2>Reference</h2>
           <ul>
             <li><a href="http://gruntjs.com/">GruntJS web site - http://gruntjs.com/</a></li>
             <li><a href="http://bower.io/">Bower web site - http://bower.io/</a></li>
             <li><a href="http://http://nodejs.org/">NodeJS web site - http://nodejs.org/</a></li>
           </ul>
-				</section>
+        </section>
         <section>
           <h2>Usefull links</h2>
           <ul>
@@ -489,46 +467,38 @@ grunt.registerTask('default', ['imagemin']);
             <li><a href="http://blog.ponyfoo.com/2013/09/26/continuous-development-in-nodejs">Continuous Development in Node.js</a></li>
           </ul>
         </section>
-
-				<section>
-					<h1>FIN</h1>
+        <section>
+          <h1>FIN</h1>
           <small>Questions?</small>
-				</section>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
 
-			</div>
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
-
-		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
-					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
-
-	</body>
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+  </body>
 </html>
