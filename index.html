@@ -39,8 +39,8 @@
 
 				<section>
 					<h2>Introduction to GruntJS, Bower and NodeJS</h2>
-          <img src="img/grunt-logo.png" alt="GruntJS" width="250px">
           <img src="img/nodejs-logo.png" alt="NodeJS"  width="250px">
+          <img src="img/grunt-logo.png" alt="GruntJS" width="250px">
           <img src="img/bower-logo.png" alt="Bower"  width="250px">
 					<p>
 						<small>
@@ -49,94 +49,9 @@
 					</p>
 				</section>
 
-				<section>
-					<section>
-						<h2>What is GruntJS?</h2>
-            <img src="img/grunt-logo.png" alt="GruntJS">
-					</section>
-					<section>
-						<h2>A Script Runner</h2>
-						<p>
-              It's like a build tool, but different.
-            </p>
-						<p>
-              <small>Think make, rake, jake, cake, etc.</small>
-            <p>
-					</section>
-          <section>
-            <h3>Setup</h3>
-            <ul>
-              <li>npm install -g grunt-cli</li>
-              <li>git init demo</li>
-              <li>cd demo</li>
-              <li>npm init</li>
-              <li>npm install grunt --save-dev</li>
-              <li>mkdir src</li>
-            </ul>
-            <h4>Gruntfile</h4>
-            <pre><code data-trim>
-module.exports = function(grunt) {
-  grunt.initConfig({
-    pkg: grunt.file.readJSON("package.json"),
-    ...
-  })
-}
-            </code></pre>
-          </section>
-          <section>
-            <h3>JSLint</h3>
-            <ul>
-              <li>npm install grunt-jslint --save-dev</li>
-            </ul>
-            <h4>Gruntfile</h4>
-            <pre><code data-trim>
-jslint: {
-  files: ["src/**/*.js"],
-  directives: {
-    devel: true
-  }
-}
-            </code></pre>
-          </section>
-          <section>
-            <h3>Watch</h3>
-            <ul>
-              <li>npm install grunt-contrib-watch --save-dev</li>
-            </ul>
-            <h4>Gruntfile</h4>
-            <pre><code data-trim>
-watch: {
-  jslint: {
-    files: ["src/**/*.js"],
-    tasks: ["jslint"],
-    options: {
-      interrupt: true
-    }
-  }
-}
-            </code></pre>
-          </section>
-          <section>
-            <h3>Uglify</h3>
-            <ul>
-              <li>npm install grunt-contrib-uglify --save-dev</li>
-            </ul>
-            <h4>Gruntfile</h4>
-            <pre><code data-trim>
-uglify: {
-  build: {
-    files: {
-      "js/index.min.js": ["src/index.js"]
-    }
-  }
-}
-            </code></pre>
-          </section>
-				</section>
-
-				<section>
-					<section>
-						<h2>What is NodeJS?</h2>
+        <section>
+          <section data-background="img/bg-cogs.png">
+            <h2>What is NodeJS?</h2>
             <img src="img/nodejs-logo.png" alt="NodeJS">
           </section>
           <section>
@@ -146,7 +61,7 @@ uglify: {
             <p>
             Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
             </p>
-					</section>
+          </section>
           <section>
             <h2>
             Server side.
@@ -264,6 +179,255 @@ uglify: {
           </section>
         </section>
 
+				<section>
+					<section>
+						<h2>What is GruntJS?</h2>
+            <img src="img/grunt-logo.png" alt="GruntJS">
+					</section>
+					<section>
+						<h2>A Script Runner</h2>
+						<p>
+              It's like a build tool, but different.
+              Build systems have been around for ages.
+            </p>
+						<p>
+              <small>make, ant, rake, jake, cake, maven, etc.</small>
+            <p>
+					</section>
+          <section>
+            <h2>Setup</h2>
+            <ul>
+              <li>Download and install node.js from <a href="http://nodejs.org">http://nodejs.org</a></li>
+              <li>$ npm install -g grunt-cli</li>
+            </ul>
+            <br>
+          </section>
+          <section>
+            <h2>2 important Files:</h2>
+            <ul>
+              <li>package.json</li>
+              <li>Gruntﬁle.js</li>
+            </ul>
+          </section>
+          <section>
+            <h2>package.json</h4>
+            <pre>
+              <code data-trim>
+{
+  "name": "evaluation.gruntjs.nodejs.bower",
+  "version": "0.0.1",
+  "description": "Introduction to GruntJS, Bower and NodeJS",
+  "author": {
+    "name": "Edouard Ouin",
+    "email": "edouard@ouin.org",
+    "web": "http://www.ouin.org"
+  },
+  },
+  "devDependencies": {
+
+  }
+}
+              </code>
+            </pre>
+            <a href="https://npmjs.org/doc/json.html">https://npmjs.org/doc/json.html</a>
+          </section>
+
+          <section>
+            <h2>Gives you</h2>
+            <ul>
+              <li>Variables you can use in your script i.e. version and name</li>
+              <li>DevDependencies that allow you to quickly install all required npm modules</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Install Grunt</h2>
+            <p>$ npm install grunt --save-dev</p>
+          </section>
+
+          <section>
+            <h2>package.json</h4>
+            <pre>
+              <code data-trim>
+{
+  "name": "evaluation.gruntjs.nodejs.bower",
+  "version": "0.0.1",
+  "description": "Introduction to GruntJS, Bower and NodeJS",
+  "author": {
+    "name": "Edouard Ouin",
+    "email": "edouard@ouin.org",
+    "web": "http://www.ouin.org"
+  },
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0"
+  }
+}
+              </code>
+            </pre>
+            <a href="https://npmjs.org/doc/json.html">https://npmjs.org/doc/json.html</a>
+          </section>
+
+          <section>
+            <h2>Install all the defined Dependencies in one go</h2>
+            <p>$ npm install</p>
+          </section>
+
+          <section>
+            <h2>Gruntfile.js</h4>
+          </section>
+
+          <section>
+            <h3>Minify with Grunt</h3>
+            <pre>
+              <code data-trim>
+
+module.exports = function(grunt) {
+  grunt.initConfig({
+    uglify: {
+      dist: {
+        src: dist/myfile.js,
+        dest: dist/myfile.min.js
+      },
+    }
+  });
+  grunt.loadNpmTasks(grunt-contrib-uglify);
+  grunt.registerTask(default, [uglify]);
+}
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Easy to add more</h2>
+            <p>$ npm  i grunt-contrib-jshint --save-dev</p>
+          </section>
+          <section>
+            <h3>Add JS Linting</h3>
+            <pre>
+              <code data-trim>
+module.exports = function(grunt) {
+  grunt.initConfig({
+    jshint: {
+      all: ['*.js']
+    },
+    uglify: {
+      dist: {
+        src: dist/myfile.js,
+        dest: dist/myfile.min.js
+      },
+    }
+  });
+  grunt.loadNpmTasks(grunt-contrib-uglify);
+  grunt.loadNpmTasks(grunt-contrib-jshint);
+  grunt.registerTask(default, ['jshint', uglify]);
+}
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h3>Add data from package.json</h3>
+            <pre>
+              <code data-trim>
+module.exports = function(grunt) {
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    jshint: {
+      all: ['* .js']
+    },
+    uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %>' + ' <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      },
+      dist: {
+        src: 'myfile.js',
+        dest: 'myfile.min.js'
+      }
+    }
+  });
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.registerTask(default, ['jshint', 'uglify']);
+};
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h3>Add data from package.json</h3>
+            <pre>
+              <code data-trim>
+module.exports = function(grunt) {
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    jshint: {
+      all: ['* .js']
+    },
+    uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %>' + ' <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      },
+      dist: {
+        src: '<%= pkg.name %>.js',
+        dest: '<%= pkg.name %>.<%= pkg.version %>.min.js'
+      }
+    }
+  });
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.registerTask(default, ['jshint', 'uglify']);
+};
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h3>Minify and combine CSS</h3>
+            <pre>
+              <code data-trim>
+cssmin: {
+  compress: {
+    options: {
+      banner: '<%= banner %>'
+    },
+    files: {
+      'project.min.css': ['1.css', '2.css', ...]
+    }
+  }
+}
+grunt.loadNpmTasks('grunt-contrib-cssmin');
+grunt.registerTask('default', ['jshint', 'uglify', 'cssmin']);
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h3>Optimize Images</h3>
+            <pre>
+              <code data-trim>
+imagemin: {
+  dist: {
+    options: {
+      optimizationLevel: 3
+    },
+    files: {
+      // 'destination': 'source'
+      'dist/img.png': 'src/img.png',
+      'dist/img.jpg': 'src/img.jpg'
+    }
+  }
+}
+grunt.registerTask('default', ['imagemin']);
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>Watch</h2>
+            <ul>
+              <li>You may have several saemons listening for changes to files to do something</li>
+              <li>Examples: Sass/Less stylesheets, Javascript files, template files, etc ...</li>
+              <li>With Grunt you can group all of them in a single place</li>
+            </ul>
+          </section>
+
+        </section>
 
         <section>
           <section>
@@ -277,6 +441,12 @@ uglify: {
             <p>
             Bower is a package manager for the web or, more specifically, browser development. Just think npm, but for browser development instead of node development. Bower’s purpose is to manage front-end assets, which can include not just javascript files, but also html, css, image, and font files. Because of this, Bower, unlike npm, can have multiple files (e.g. .js, .css, .html, .png, .ttf) which are considered the main file(s). Bower semantically considers these main files, when packaged together, a component.
             </p>
+          </section>
+          <section>
+            <h2>
+            Community modules
+            </h2>
+            <img src="img/bower.png" alt="LinkedIn" width="800px">
           </section>
           <section>
             <h2>
@@ -299,6 +469,7 @@ uglify: {
         <section>
           <h2>Usefull links</h2>
           <ul>
+            <li><a href="http://benalman.com/news/2012/08/why-grunt/">Why grunt? Why not something else?</a>
             <li><a href="http://http://tech.pro/tutorial/1190/package-managers-an-introductory-guide-for-the-uninitiated-front-end-developer#what_is_a_package_manager">Package Managers: An Introductory Guide For The Uninitiated Front-End Developer</a></li>
             <li><a href="http://http://net.tutsplus.com/tutorials/javascript-ajax/meeting-grunt-the-build-tool-for-javascript/">Meet Grunt: The Build Tool for JavaScript</a></li>
             <li><a href="http://http://net.tutsplus.com/tutorials/tools-and-tips/meet-bower-a-package-manager-for-the-web//">Meet Bower: A Package Manager For The Web</a></li>
