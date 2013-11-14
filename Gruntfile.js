@@ -81,6 +81,16 @@ module.exports = function(grunt) {
 			}
 		},
 
+		connect_aws: {
+			server: {
+				options: {
+					hostname: 'ec2-54-194-32-25.eu-west-1.compute.amazonaws.com',
+					port: 8000,
+					base: '.'
+				}
+			}
+		},
+
 		zip: {
 			'reveal-js-presentation.zip': [
 				'index.html',
@@ -136,4 +146,6 @@ module.exports = function(grunt) {
 	// Serve presentation locally
 	grunt.registerTask('serve', ['connect', 'watch']);
 
+	// Serve presentation locally
+	grunt.registerTask('serve_aws', ['connect_aws', 'watch']);
 };
