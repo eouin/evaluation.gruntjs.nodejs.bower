@@ -1,11 +1,6 @@
 /* global module:false */
 module.exports = function(grunt) {
 
-	var globalConfig = {
-    dev: 'localhost',
-    prod: 'www.ouin.org'
-  };
-
 	// Project configuration
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -82,6 +77,11 @@ module.exports = function(grunt) {
 				options: {
 					port: 8000,
 					base: '.'
+				}
+			},
+			dev: {
+				options: {
+					hostname: 'localhost'
 				}
 			},
 			prod: {
