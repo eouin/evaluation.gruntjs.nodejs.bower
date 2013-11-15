@@ -1,6 +1,11 @@
 /* global module:false */
 module.exports = function(grunt) {
 
+	var globalConfig = {
+    dev: 'localhost',
+    prod: 'www.ouin.org'
+  };
+
 	// Project configuration
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -78,15 +83,10 @@ module.exports = function(grunt) {
 					port: 8000,
 					base: '.'
 				}
-			}
-		},
-
-		connect_aws: {
-			server: {
+			},
+			prod: {
 				options: {
-					hostname: 'ec2-54-194-32-25.eu-west-1.compute.amazonaws.com',
-					port: 8000,
-					base: '.'
+					hostname: 'ec2-54-194-32-25.eu-west-1.compute.amazonaws.com'
 				}
 			}
 		},
@@ -144,8 +144,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('html', ['htmllint']);
 
 	// Serve presentation locally
-	grunt.registerTask('serve', ['connect', 'watch']);
+	grunt.registerTask('serve', ['connect:dev', 'watch']);
 
 	// Serve presentation locally
-	grunt.registerTask('serve_aws', ['connect_aws', 'watch']);
+	grunt.registerTask('aws', ['connect:prod', 'watch']);
 };
