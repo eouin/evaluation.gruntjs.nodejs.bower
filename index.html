@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Evaluation of GruntJS, NodeJS, Bower and Sass</title>
-    <meta name="description" content="Evaluation of GruntJS, NodeJS and Bower">
+    <meta name="description" content="Evaluation of GruntJS, NodeJS, Bower, Sass, AngularJS and Yeoman">
     <meta name="author" content="Edouard Ouin">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/night.css" id="theme">
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -25,11 +25,13 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section>
-          <h2>Evaluation of GruntJS, NodeJS, Bower and Sass</h2>
-          <img src="img/nodejs-logo.png" alt="NodeJS"  width="200px">
-          <img src="img/grunt-logo.png" alt="GruntJS" width="200px">
-          <img src="img/bower-logo.png" alt="Bower"  width="200px">
-          <img src="img/sass-logo.png" alt="Sass"  width="200px">
+          <h2>GruntJS, NodeJS,  Bower, Sass, AngularJS and Yeoman</h2>
+          <img src="img/nodejs-logo.png" alt="NodeJS"  width="150px">
+          <img src="img/grunt-logo.png" alt="GruntJS" width="150px">
+          <img src="img/bower-logo.png" alt="Bower"  width="150px">
+          <img src="img/sass-logo.png" alt="Sass"  width="150px">
+          <img src="img/angularjs-logo.png" alt="Sass"  width="150px">
+          <img src="img/yeoman-logo.png" alt="Sass"  width="150px">
           <p><small>By Edouard Ouin, David Jimenez Calvo, Sinikka Schroter And Steve Ben Ezra</small></p>
           <p>available at <a href="https://github.com/eouin/evaluation.gruntjs.nodejs.bower.git">https://github.com/eouin/evaluation.gruntjs.nodejs.bower.git</a></p>
         </section>
@@ -451,21 +453,20 @@ grunt.registerTask('default', ['imagemin']);
           <section>
             <h2>What is Sass?</h2>
             <img src="img/sass-logo.png" alt="Sass">
-
           </section>
-           <section>
-              <h2>
-                Sass (Syntactically Awesome Stylesheets) is a CSS extension language
-              </h2>
-              <p>
-                You write .scss (Sass files) which then get compiled into normal .css files by a grunt plugin for use by your application.
-              </p>
-            </section>
-            <section>
-              <h2>
-                It gives us features which don't exist in CSS like:
-              </h2>
-              <div>
+          <section>
+            <h2>
+              Sass (Syntactically Awesome Stylesheets) is a CSS extension language
+            </h2>
+            <p>
+              You write .scss (Sass files) which then get compiled into normal .css files by a grunt plugin for use by your application.
+            </p>
+          </section>
+          <section>
+            <h2>
+              It gives us features which don't exist in CSS like:
+            </h2>
+            <div>
               <ul>
                 <li>Variables - reuse a value throughout your stylesheet</li>
                 <li>Nesting - nesting css selectors for better readability</li>
@@ -475,12 +476,12 @@ grunt.registerTask('default', ['imagemin']);
                 <li>Operators - do match in CSS with standard math operators (for calculating pixel sizes etc.) </li>
               </ul>
             </div>
-            </section>
-            <section>
-              <h2>
-                The benefits:
-              </h2>
-              <div>
+          </section>
+          <section>
+            <h2>
+              The benefits:
+            </h2>
+            <div>
               <ul>
                 <li>CSS Reuse</li>
                 <li>Better Readability</li>
@@ -488,15 +489,356 @@ grunt.registerTask('default', ['imagemin']);
                 <li>Fewer HTTP Requests using @Import attribute</li>
               </ul>
             </div>
-            </section>
+          </section>
         </section>
+        <section>
+          <section>
+            <h2>What is Angular.js?</h2>
+            <img src="img/angularjs-logo.png" alt="AngularJS">
+          </section>
+          <section>
+            <h2>What is Angular.js?</h2>
+            <p>
+              Structural framework for dynamic applications
+            </p>
+            <img src="img/AngularJS-large.png"></img>
+          </section>
+          <section>
+            <h2>Key pieces of Angular</h2>
+            <ul>
+              <li>Modules</li>
+              <li>URL based routes</li>
+              <li>Decoupled View's and Controllers</li>
+              <li>Two way data binding</li>
+              <li>Dependency Injection</li>
+              <li>Directives</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Modules</h2>
+            <pre>
+              <code>
+    var angularLocalStorage = angular.module('LocalStorageModule', []);
+    angularLocalStorage.service('localStorageService', [
+      '$rootScope', 
+      'prefix', 
+      'cookie',
+      function($rootScope, prefix, cookie) {
+        return ...
+      }]);
+              </code>
+            </pre>
+            <p>
+              https://github.com/grevory/angular-local-storage
+            </p>
+          </section>
+          <section>
+            <h2>Routes</h2>
+            <pre>
+              <code>
+                $routeProvider.when('/books', {
+                    templateUrl: 'books.html',
+                    controller: 'BooksCtrl'
+                });
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Controller</h2>
+            <pre>
+              <code>
+               function BooksCtrl($scope) {
+                 $scope.books = [
+                   { title: 'The Law',
+                     author:'Frederik Bastiat'},
+                   { title: 'Two Treatises of Government',
+                     author:'John Locke'},
+                   { title: 'The Communist Manifesto',
+                     author:'Karl Marx and Friedrich Engels'}
+                 ]
+               }
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Views</h2>
+            <pre>
+              <code>
+              &lt;ul&gt;
+                &lt;li ng-repeat="book in books"&gt;
+                    {{book.title}} written by {{book.author}}.
+                &lt;/li&gt;
+              &lt;/ul&gt;
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Data Binding</h2>
+            <pre>
+              <code>
+              function BooksCtrl($scope) {
+                $scope.books = [
+                  { title: 'The Law',
+                    author:'Frederik Bastiat'},
+                  { title: 'Two Treatises of Government',
+                    author:'John Locke'},
+                  { title: 'The Communist Manifesto',
+                    author:'Karl Marx and Friedrich Engels'}
+                ]
+              }
 
+              &lt;ul&gt;
+                &lt;li ng-repeat="book in books"&gt;
+                    {{book.title}} written by {{book.author}}.
+                &lt;/li&gt;
+              &lt;/ul&gt;
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Dependency Injection</h2>
+            <pre>
+              <code>
+              function BooksCtrl($scope, $log) {
+                $scope.books = [
+                  { title: 'The Law',
+                    author:'Frederik Bastiat'},
+                  { title: 'Two Treatises of Government',
+                    author:'John Locke'},
+                  { title: 'The Communist Manifesto',
+                    author:'Karl Marx and Friedrich Engels'}
+                ]
+                
+                $log.info("Books Loaded...")
+              }
+              </code>
+            </pre>
+            <pre>
+              <code>
+              &lt;li ng-repeat="book in books"&gt;
+                  {{book.title}} written by {{book.author}}.
+              &lt;/li&gt;
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Directives</h2>
+            <pre>
+              <code>
+              var app = angular.module("app", []);
+
+              app.directive("other", function() {
+                return {
+                  restrict: "E",
+                  template: "&lt;div&gt;Hello World!!!&lt;/div&gt;"
+                }
+              });
+
+              &lt;div ng-app="something"&gt;
+                &lt;other&gt;&lt;/other&gt;
+              &lt;div&gt;
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Directives</h2>
+            <pre>
+              <code>
+              var app = angular.module("app", []);
+
+              app.directive("other", function() {
+                return {
+                  restrict: "A",
+                  link: function() {
+                    alert("Hello World")
+                  }
+                }
+              });
+
+              &lt;div ng-app="something"&gt;
+                &lt;div other&gt;&lt;/div&gt;
+              &lt;div&gt;
+              </code>
+            </pre>
+          </section>
+          <section>
+            Use AngularUI and UI Bootstrap components
+            <img src="img/angular-ui.png"></img>
+            <a href="http://angular-ui.github.com">angular-ui.github.com</a>
+          </section>
+          <section>
+            <h2>
+              Making Big Applications...
+            </h2>
+            <p>
+              What follows is taken from:<br/>
+              <a href="http://briantford.com/blog/huuuuuge-angular-apps.html">briantford.com/blog/huuuuuge-angular-apps.html</a><br/>
+              By Brian Ford:<br/>
+              AngularJS Team Developer<br/>
+            <p>
+          </section>
+          <section>
+            <h2>Additional Info</h2>
+            <ul>
+              <li><a href="https://github.com/angular/angularjs-batarang">AngularJS Batarang</a></li>
+              <li><a href="http://egghead.io">egghead.io</a></li>
+              <li><a href="http://ngmodules.org">ngmodules.org</a></li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>What is Yeoman?</h2>
+            <img src="img/yeoman-logo.png" height="512"></img>
+          </section>
+          <section>
+            <h2>Yo is your gateway to this magical new world</h2>
+            <p>
+              Yeoman is a robust and opinionated client-side stack, comprising tools and frameworks that can help developers quickly build beautiful web applications.
+            </p>
+            <ul>
+              <li>It scaffolds out boilerplate.</li>
+              <li>Can prescribe helpful Grunt tasks.</li>
+              <li>Can automatically install dependencies you need</li>
+              <li>Just run: <b>$ npm install -g yo</b></li>
+              <li>This install yo, grunt and bower for you.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>yo</h2>
+            <p><i>what glues it together</i></p>
+            <ul>
+              <li>Customizable project setup<br>through generators</li>
+              <li>Initial project scaffolding</li>
+              <li>Component scaffolding<br>(models, directives, tests, ...)</li>
+              <li>160+ generators on npm</li>
+            </ul>
+          </section>
+          <section>
+            <h2>The old-fashioned Workflow</h2>
+            <ul>
+              <li>Find an HTML Boilerplate</li>
+              <li>Download it, add it to project</li>
+              <li>Find a UI Boilerplate</li>
+              <li>Download it, add it to project</li>
+              <li>Download project libs, add 'em</li>
+              <li>Copy boilerplate for models,<br>views, setup</li>
+              <li>Setup test runner</li>
+              <li>Setup build process</li>
+              <li><b>Write Real Code!</b></li>
+            </ul>
+          </section>
+          <section>
+            <h2 style="margin-bottom: 50px">Can we do better?</h2>
+              <p style="display: block;margin: 0 0 20px 60px;text-align: left;">
+                <code>$ yo webapp</code>
+              </p>
+              <ul style="display: block; margin: 0 0 0 100px;">
+                <li>HTML5 Boilerplate</li>
+                <li>Twitter Bootstrap</li>
+                <li>Project Structure</li>
+                <li style="font-size: 36px; font-style: normal; font-variant: normal;">Mocha Tests</li>
+                <li style="font-size: 36px; font-style: normal; font-variant: normal;">RequireJS (optional)</li>
+                <li style="font-size: 36px; font-style: normal; font-variant: normal;">Modernizr (optional)</li>
+                <li style="font-size: 36px; font-style: normal; font-variant: normal;">Build process</li>
+                <li style="font-size: 36px; font-style: normal; font-variant: normal;">...</li>
+              </ul>
+            <img src="img/yeoman-006.png" height="350px" class="absolute-element" style="position: absolute; max-height: none; max-width: none; z-index: 4; left: 638px; top: 140px;">
+          </section>
+          <section>
+            <h2>Can we do <b>even better</b>?</h2>
+            <div><br></div>
+            <div style="text-align: left;">
+              <code>$ yo angular</code>
+              <div>
+                <br>
+              </div>
+              <div>
+                <ul style="width: 557px;">
+                  <li>HTML5 Boilerplate</li>
+                  <li>Twitter Bootstrap</li>
+                  <li>AngularJS</li>
+                  <li>Karma Testrunner</li>
+                  <li>Scaffolding for Models, Directives, Routes, Views, Values, Constants, Services, Factories, ...
+                  </li>
+                  <li>DI-aware JavaScript minification</li>
+                  <li>CoffeeScript support</li>
+                </ul>
+              </div>
+            </div>
+            <img src="img/png_base646804324fd66fad60.png" style="text-align: center; width: 272px; height: 272px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 647px; top: 103px;" class="absolute-element">
+          </section>
+          <section>
+            <h2>Can we do <b>even better?</b></h2>
+            <div style="text-align: left;">
+              <br>
+            </div>
+            <div style="text-align: left;">
+              <code>$ yo chromeapp</code>
+            </div>
+            <div style="text-align: left;">
+              <br>
+            </div>
+            <div style="text-align: left;">
+              <ul style="text-align: left;">
+                <li>HTML5 Boilerplate</li>
+                <li>Twitter Bootstrap</li>
+                <li>Permission wizard</li>
+                <li>Chrome app manifest</li>
+                <li>Default icon</li>
+                <li>Build process</li>
+              </ul>
+            </div>
+            <img src="img/Chrome-Store.png" class="absolute-element" style="position: absolute; max-height: none; max-width: none; width: 208px; height: 208px; z-index: 4; left: 689px; top: 122px;">
+          </section>
+          <section>
+            <h2>What else?</h2>
+            <div style="text-align: left; ">
+              <ul>
+                <li>Flight</li>
+                <li>Backbone (Boilerplate)</li>
+                <li>Ember</li>
+                <li>Bookmarklets</li>
+                <li>CommonJS modules</li>
+                <li>Wordpress</li>
+                <li>jQuery Plugins</li>
+                <li>Grunt Plugins</li>
+                <li>Slideshows</li>
+              </ul>
+              <div><br></div>
+              <a href="http://yeoman.io/community-generators.html">http://yeoman.io/community-generators.html</a><br>
+            </div>
+            <div class="absolute-element" style="position: absolute; width: 308px; height: 468px; z-index: 4; left: 671px; top: 99px; max-height: none; max-width: none;">
+              <img src="img/yeoman-009.png"><br>
+            </div>
+          </section>
+          <section>
+            <h2>Writing your own is easy</h2>
+            <div>
+              <ul style="text-align: left;display: block;margin: 0 0 0 500px;">
+                <li>Can be written for <b>any</b><br> framework or workflow</li>
+                <li>Can integrate with your backend</li>
+                <li>Fork an existing one or start from scratch with<br>generator-generator</li>
+              </ul>
+              <div style="text-align: left;"><br></div>
+              <div style="text-align: left;display: block;margin: 0 0 0 500px;">
+                <a href="http://yeoman.io/generators.html">http://yeoman.io/<br>generators.html</a><br>
+              </div>
+            </div>
+            <div class="absolute-element" style="position: absolute; z-index: 4; left: 140px; top: 100px;">
+              <img src="img/yeoman-008.png" height="350px" ><br>
+            </div>
+          </section>
+        </section>
         <section>
           <h2>Reference</h2>
           <ul>
             <li><a href="http://gruntjs.com/">GruntJS web site - http://gruntjs.com/</a></li>
             <li><a href="http://bower.io/">Bower web site - http://bower.io/</a></li>
             <li><a href="http://http://nodejs.org/">NodeJS web site - http://nodejs.org/</a></li>
+            <li><a href="http://sass-lang.com">SASS web site - http://sass-lang.com/</a></li>
+            <li><a href="http://angularjs.org">AngularJS web site - http://angularjs.org</a></li>
+            <li><a href="http://yeoman.io">Yeoman.io web site - http://yeoman.io</a></li>
           </ul>
         </section>
         <section>
@@ -520,7 +862,7 @@ grunt.registerTask('default', ['imagemin']);
       </div>
     </div>
     <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.min.js"></script>
+    <script src="js/reveal.js"></script>
     <script>
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
@@ -529,10 +871,10 @@ grunt.registerTask('default', ['imagemin']);
         progress: true,
         history: true,
         center: true,
-
+      
         theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
         transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-
+      
         // Optional libraries used to extend on reveal.js
         dependencies: [
           { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
