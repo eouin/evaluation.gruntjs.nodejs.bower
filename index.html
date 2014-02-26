@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="lib/css/zenburn.css">
     <!-- If the query includes 'print-pdf', use the PDF print sheet -->
     <script>
-      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
     </script>
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
@@ -42,15 +42,15 @@
           </section>
           <section>
             <h2>
-              Node.js is a way of running JavaScript on the server.
+            Node.js is a way of running JavaScript on the server.
             </h2>
             <p>
-              Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+            Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
             </p>
           </section>
           <section>
             <h2>
-              Server side.
+            Server side.
             </h2>
             <ul>
               <li>Javascript</li>
@@ -62,7 +62,7 @@
           </section>
           <section>
             <h2>
-              So why are async and events good?
+            So why are async and events good?
             </h2>
             <ul>
               <li>Easier to write</li>
@@ -72,7 +72,7 @@
           </section>
           <section>
             <h2>
-              Rapid prototyping, rapid development
+            Rapid prototyping, rapid development
             </h2>
             <ul>
               <li>RESTful services with no effort</li>
@@ -82,13 +82,13 @@
           </section>
           <section>
             <h2>
-              Community modules - NPM
+            Community modules - NPM
             </h2>
             <img src="img/npm.png" alt="LinkedIn" width="800px">
           </section>
           <section>
             <h2>
-              Private NPM registry
+            Private NPM registry
             </h2>
             <ul>
               <li>Simply replicate the NPM CouchDB</li>
@@ -98,43 +98,43 @@
           </section>
           <section>
             <h2>
-              Interesting projects
+            Interesting projects
             </h2>
             <ul>
               <li>
                 <h4>Express</h4>
                 <small>
-                  <ol>
-                    <li>Minimal web application framework</li>
-                    <li>Additional features are provided as modules or middleware: template engines, models, authentication and authorization, etc ...</li>
-                  </ol>
+                <ol>
+                  <li>Minimal web application framework</li>
+                  <li>Additional features are provided as modules or middleware: template engines, models, authentication and authorization, etc ...</li>
+                </ol>
                 </small>
               </li>
               <li>
                 <h4>Meteor</h4>
                 <small>
-                  <ol>
-                    <li>Next-gen framework for real-time collaborative web applications</li>
-                    <li>Live page updates</li>
-                    <li>Support for offline databases with subsequent synchronization</li>
-                  </ol>
+                <ol>
+                  <li>Next-gen framework for real-time collaborative web applications</li>
+                  <li>Live page updates</li>
+                  <li>Support for offline databases with subsequent synchronization</li>
+                </ol>
                 </small>
               </li>
               <li>
                 <h4>Socket.io</h4>
                 <small>
-                  <ol>
-                    <li>Provides support for server-initiated push events using WebSockets, Ajax polling, iframe, JSONP or Flash based channels</li>
-                    <li>Transparent for both clients and server</li>
-                    <li>Can run standalone or integrated with Express</li>
-                  </ol>
+                <ol>
+                  <li>Provides support for server-initiated push events using WebSockets, Ajax polling, iframe, JSONP or Flash based channels</li>
+                  <li>Transparent for both clients and server</li>
+                  <li>Can run standalone or integrated with Express</li>
+                </ol>
                 </small>
               </li>
             </ul>
           </section>
           <section>
             <h2>
-              When to use NodeJS
+            When to use NodeJS
             </h2>
             <ul>
               <li>REST+JSON APIs</li>
@@ -145,7 +145,7 @@
           </section>
           <section>
             <h2>
-              When NOT to use NodeJS
+            When NOT to use NodeJS
             </h2>
             <ul>
               <li>CPU-bound tasks</li>
@@ -172,11 +172,11 @@
           <section>
             <h2>A Script Runner</h2>
             <p>
-              It's like a build tool, but different.
-              Build systems have been around for ages.
+            It's like a build tool, but different.
+            Build systems have been around for ages.
             </p>
             <p>
-              <small>make, ant, rake, jake, cake, maven, etc.</small>
+            <small>make, ant, rake, jake, cake, maven, etc.</small>
             <p>
           </section>
           <section>
@@ -210,11 +210,10 @@
   },
   },
   "devDependencies": {
-
   }
 }
               </code>
-            </pre>
+</pre>
             <a href="https://npmjs.org/doc/json.html">https://npmjs.org/doc/json.html</a>
           </section>
           <section>
@@ -248,7 +247,7 @@
   }
 }
               </code>
-            </pre>
+</pre>
             <a href="https://npmjs.org/doc/json.html">https://npmjs.org/doc/json.html</a>
           </section>
           <section>
@@ -263,7 +262,6 @@
             <h3>Minify with Grunt</h3>
             <pre>
               <code data-trim>
-
 module.exports = function(grunt) {
   grunt.initConfig({
     uglify: {
@@ -277,7 +275,7 @@ module.exports = function(grunt) {
   grunt.registerTask(default, [uglify]);
 }
               </code>
-            </pre>
+</pre>
           </section>
           <section>
             <h2>Easy to add more</h2>
@@ -304,7 +302,7 @@ module.exports = function(grunt) {
   grunt.registerTask(default, ['jshint', uglify]);
 }
               </code>
-            </pre>
+</pre>
           </section>
           <section>
             <h3>Add data from package.json</h3>
@@ -331,7 +329,7 @@ module.exports = function(grunt) {
   grunt.registerTask(default, ['jshint', 'uglify']);
 };
               </code>
-            </pre>
+</pre>
           </section>
           <section>
             <h3>Add data from package.json</h3>
@@ -358,7 +356,7 @@ module.exports = function(grunt) {
   grunt.registerTask(default, ['jshint', 'uglify']);
 };
               </code>
-            </pre>
+</pre>
           </section>
           <section>
             <h3>Minify and combine CSS</h3>
@@ -377,7 +375,7 @@ cssmin: {
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.registerTask('default', ['jshint', 'uglify', 'cssmin']);
               </code>
-            </pre>
+</pre>
           </section>
           <section>
             <h3>Optimize Images</h3>
@@ -397,7 +395,7 @@ imagemin: {
 }
 grunt.registerTask('default', ['imagemin']);
               </code>
-            </pre>
+</pre>
           </section>
           <section>
             <h2>Watch</h2>
@@ -415,10 +413,10 @@ grunt.registerTask('default', ['imagemin']);
           </section>
           <section>
             <h2>
-              Bower is package manager for the web done by Twitter
+            Bower is package manager for the web done by Twitter
             </h2>
             <p>
-              Bower is a package manager for the web or, more specifically, browser development. Just think npm, but for browser development instead of node development. Bower’s purpose is to manage front-end assets, which can include not just javascript files, but also html, css, image, and font files. Because of this, Bower, unlike npm, can have multiple files (e.g. .js, .css, .html, .png, .ttf) which are considered the main file(s). Bower semantically considers these main files, when packaged together, a component.
+            Bower is a package manager for the web or, more specifically, browser development. Just think npm, but for browser development instead of node development. Bower’s purpose is to manage front-end assets, which can include not just javascript files, but also html, css, image, and font files. Because of this, Bower, unlike npm, can have multiple files (e.g. .js, .css, .html, .png, .ttf) which are considered the main file(s). Bower semantically considers these main files, when packaged together, a component.
             </p>
           </section>
           <section>
@@ -436,16 +434,16 @@ grunt.registerTask('default', ['imagemin']);
           </section>
           <section>
             <h2>
-              Community modules
+            Community modules
             </h2>
             <img src="img/bower.png" alt="LinkedIn" width="800px">
           </section>
           <section>
             <h2>
-              What is the difference between Bower and NPM?
+            What is the difference between Bower and NPM?
             </h2>
             <p>
-              npm is most commonly used for Node.js modules, even though a few people use it for front-end packages. Bower is created solely for the front-end and is optimized with that in mind. The biggest difference is that npm does nested dependency tree, which doesn't work that well on the front-end, while Bower requires a flat dependency tree.
+            npm is most commonly used for Node.js modules, even though a few people use it for front-end packages. Bower is created solely for the front-end and is optimized with that in mind. The biggest difference is that npm does nested dependency tree, which doesn't work that well on the front-end, while Bower requires a flat dependency tree.
             </p>
           </section>
         </section>
@@ -456,15 +454,15 @@ grunt.registerTask('default', ['imagemin']);
           </section>
           <section>
             <h2>
-              Sass (Syntactically Awesome Stylesheets) is a CSS extension language
+            Sass (Syntactically Awesome Stylesheets) is a CSS extension language
             </h2>
             <p>
-              You write .scss (Sass files) which then get compiled into normal .css files by a grunt plugin for use by your application.
+            You write .scss (Sass files) which then get compiled into normal .css files by a grunt plugin for use by your application.
             </p>
           </section>
           <section>
             <h2>
-              It gives us features which don't exist in CSS like:
+            It gives us features which don't exist in CSS like:
             </h2>
             <div>
               <ul>
@@ -479,7 +477,7 @@ grunt.registerTask('default', ['imagemin']);
           </section>
           <section>
             <h2>
-              The benefits:
+            The benefits:
             </h2>
             <div>
               <ul>
@@ -499,7 +497,7 @@ grunt.registerTask('default', ['imagemin']);
           <section>
             <h2>What is Angular.js?</h2>
             <p>
-              Structural framework for dynamic applications
+            Structural framework for dynamic applications
             </p>
             <img src="img/AngularJS-large.png"></img>
           </section>
@@ -529,7 +527,7 @@ grunt.registerTask('default', ['imagemin']);
               </code>
             </pre>
             <p>
-              https://github.com/grevory/angular-local-storage
+            https://github.com/grevory/angular-local-storage
             </p>
           </section>
           <section>
@@ -586,7 +584,6 @@ grunt.registerTask('default', ['imagemin']);
                     author:'Karl Marx and Friedrich Engels'}
                 ]
               }
-
               &lt;ul&gt;
                 &lt;li ng-repeat="book in books"&gt;
                     {{book.title}} written by {{book.author}}.
@@ -626,14 +623,12 @@ grunt.registerTask('default', ['imagemin']);
             <pre>
               <code>
               var app = angular.module("app", []);
-
               app.directive("other", function() {
                 return {
                   restrict: "E",
                   template: "&lt;div&gt;Hello World!!!&lt;/div&gt;"
                 }
               });
-
               &lt;div ng-app="something"&gt;
                 &lt;other&gt;&lt;/other&gt;
               &lt;div&gt;
@@ -645,7 +640,6 @@ grunt.registerTask('default', ['imagemin']);
             <pre>
               <code>
               var app = angular.module("app", []);
-
               app.directive("other", function() {
                 return {
                   restrict: "A",
@@ -654,7 +648,6 @@ grunt.registerTask('default', ['imagemin']);
                   }
                 }
               });
-
               &lt;div ng-app="something"&gt;
                 &lt;div other&gt;&lt;/div&gt;
               &lt;div&gt;
@@ -668,13 +661,13 @@ grunt.registerTask('default', ['imagemin']);
           </section>
           <section>
             <h2>
-              Making Big Applications...
+            Making Big Applications...
             </h2>
             <p>
-              What follows is taken from:<br/>
-              <a href="http://briantford.com/blog/huuuuuge-angular-apps.html">briantford.com/blog/huuuuuge-angular-apps.html</a><br/>
-              By Brian Ford:<br/>
-              AngularJS Team Developer<br/>
+            What follows is taken from:<br/>
+            <a href="http://briantford.com/blog/huuuuuge-angular-apps.html">briantford.com/blog/huuuuuge-angular-apps.html</a><br/>
+            By Brian Ford:<br/>
+            AngularJS Team Developer<br/>
             <p>
           </section>
           <section>
@@ -694,7 +687,7 @@ grunt.registerTask('default', ['imagemin']);
           <section>
             <h2>Yo is your gateway to this magical new world</h2>
             <p>
-              Yeoman is a robust and opinionated client-side stack, comprising tools and frameworks that can help developers quickly build beautiful web applications.
+            Yeoman is a robust and opinionated client-side stack, comprising tools and frameworks that can help developers quickly build beautiful web applications.
             </p>
             <ul>
               <li>It scaffolds out boilerplate.</li>
@@ -730,19 +723,19 @@ grunt.registerTask('default', ['imagemin']);
           </section>
           <section>
             <h2 style="margin-bottom: 50px">Can we do better?</h2>
-              <p style="display: block;margin: 0 0 20px 60px;text-align: left;">
-                <code>$ yo webapp</code>
-              </p>
-              <ul style="display: block; margin: 0 0 0 100px;">
-                <li>HTML5 Boilerplate</li>
-                <li>Twitter Bootstrap</li>
-                <li>Project Structure</li>
-                <li style="font-size: 36px; font-style: normal; font-variant: normal;">Mocha Tests</li>
-                <li style="font-size: 36px; font-style: normal; font-variant: normal;">RequireJS (optional)</li>
-                <li style="font-size: 36px; font-style: normal; font-variant: normal;">Modernizr (optional)</li>
-                <li style="font-size: 36px; font-style: normal; font-variant: normal;">Build process</li>
-                <li style="font-size: 36px; font-style: normal; font-variant: normal;">...</li>
-              </ul>
+            <p style="display: block;margin: 0 0 20px 60px;text-align: left;">
+            <code>$ yo webapp</code>
+            </p>
+            <ul style="display: block; margin: 0 0 0 100px;">
+              <li>HTML5 Boilerplate</li>
+              <li>Twitter Bootstrap</li>
+              <li>Project Structure</li>
+              <li style="font-size: 36px; font-style: normal; font-variant: normal;">Mocha Tests</li>
+              <li style="font-size: 36px; font-style: normal; font-variant: normal;">RequireJS (optional)</li>
+              <li style="font-size: 36px; font-style: normal; font-variant: normal;">Modernizr (optional)</li>
+              <li style="font-size: 36px; font-style: normal; font-variant: normal;">Build process</li>
+              <li style="font-size: 36px; font-style: normal; font-variant: normal;">...</li>
+            </ul>
             <img src="img/yeoman-006.png" height="350px" class="absolute-element" style="position: absolute; max-height: none; max-width: none; z-index: 4; left: 638px; top: 140px;">
           </section>
           <section>
@@ -846,47 +839,47 @@ grunt.registerTask('default', ['imagemin']);
           <ul>
             <li><a href="http://blog.ponyfoo.com/2013/09/26/continuous-development-in-nodejs">Continuous Development in Node.js</a></li>
             <li><a href="http://benalman.com/news/2012/08/why-grunt/">Why grunt? Why not something else?</a>
-            <li><a href="http://addyosmani.com/blog/making-maven-grunt/">Addy Osmani - Making Maven Grunt</a></li>
-            <li><a href="http://www.youtube.com/watch?v=bntNYzCrzvE">Video - Grunt JavaScript Automation for the Lazy Developer</a></li>
-            <li><a href="http://http://tech.pro/tutorial/1190/package-managers-an-introductory-guide-for-the-uninitiated-front-end-developer#what_is_a_package_manager">Package Managers: An Introductory Guide For The Uninitiated Front-End Developer</a></li>
-            <li><a href="http://http://net.tutsplus.com/tutorials/javascript-ajax/meeting-grunt-the-build-tool-for-javascript/">Meet Grunt: The Build Tool for JavaScript</a></li>
-            <li><a href="http://http://net.tutsplus.com/tutorials/tools-and-tips/meet-bower-a-package-manager-for-the-web//">Meet Bower: A Package Manager For The Web</a></li>
-            <li><a href="http://danheberden.com/presentations/bower/">Bower - Clientside Package Management: Less Work, More awesome</a></li>
-            <li><a href="http://alistapart.com/article/why-sass">Sass - Why Sass?</a></li>
-          </ul>
-        </section>
-        <section>
-          <h1>FIN</h1>
-          <small>Questions?</small>
-        </section>
+              <li><a href="http://addyosmani.com/blog/making-maven-grunt/">Addy Osmani - Making Maven Grunt</a></li>
+              <li><a href="http://www.youtube.com/watch?v=bntNYzCrzvE">Video - Grunt JavaScript Automation for the Lazy Developer</a></li>
+              <li><a href="http://http://tech.pro/tutorial/1190/package-managers-an-introductory-guide-for-the-uninitiated-front-end-developer#what_is_a_package_manager">Package Managers: An Introductory Guide For The Uninitiated Front-End Developer</a></li>
+              <li><a href="http://http://net.tutsplus.com/tutorials/javascript-ajax/meeting-grunt-the-build-tool-for-javascript/">Meet Grunt: The Build Tool for JavaScript</a></li>
+              <li><a href="http://http://net.tutsplus.com/tutorials/tools-and-tips/meet-bower-a-package-manager-for-the-web//">Meet Bower: A Package Manager For The Web</a></li>
+              <li><a href="http://danheberden.com/presentations/bower/">Bower - Clientside Package Management: Less Work, More awesome</a></li>
+              <li><a href="http://alistapart.com/article/why-sass">Sass - Why Sass?</a></li>
+            </ul>
+          </section>
+          <section>
+            <h1>FIN</h1>
+            <small>Questions?</small>
+          </section>
+        </div>
       </div>
-    </div>
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
-    <script>
+      <script src="lib/js/head.min.js"></script>
+      <script src="js/reveal.js"></script>
+      <script>
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
       
-        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
       
-        // Optional libraries used to extend on reveal.js
-        dependencies: [
-          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-          // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
-          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-        ]
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+      // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+      // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
       });
-    </script>
-  </body>
-</html>
+      </script>
+    </body>
+  </html>
