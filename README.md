@@ -7,7 +7,7 @@ An evaluation of :
 
 install, run:
 
-npm install
-grunt
+- npm install
+- grunt
 
 
